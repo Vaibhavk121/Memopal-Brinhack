@@ -1,0 +1,219 @@
+.manage-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: #181c24;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.manage-sidebar {
+    width: 260px;
+    background: rgba(24, 28, 36, 0.55);
+    border-radius: 18px 0 0 18px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.18);
+    padding: 32px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1.5px solid rgba(0, 198, 251, 0.10);
+}
+
+.manage-sidebar-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 32px;
+    margin-bottom: 4px;
+}
+
+.manage-sidebar-subtitle {
+    color: #b0b8c1;
+    font-size: 1.05rem;
+    margin-left: 32px;
+    margin-bottom: 32px;
+}
+
+.manage-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.manage-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 24px 10px 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    opacity: 0.85;
+}
+
+.manage-nav-item.active {
+    background: linear-gradient(90deg, #232b36 60%, #232b36cc 100%);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.18);
+    color: #fff;
+    opacity: 1;
+}
+
+.manage-nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.manage-main {
+    flex: 1 1 0;
+    padding: 32px 32px 32px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.manage-card {
+    background: rgba(35, 43, 54, 0.55);
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.18);
+    padding: 32px 36px 32px 36px;
+    min-width: 600px;
+    width: 100%;
+    max-width: 900px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1.5px solid rgba(0, 198, 251, 0.10);
+}
+
+.manage-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.manage-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.manage-table-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #444a54;
+    min-height: 56px;
+    font-size: 1.08rem;
+}
+
+.manage-table-row:last-child {
+    border-bottom: none;
+}
+
+.manage-table-header {
+    font-weight: 600;
+    color: #fff;
+    background: none;
+    border-bottom: 1px solid #444a54;
+    min-height: 40px;
+}
+
+.manage-avatar-cell {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.manage-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #005bea 0%, #00c6fb 100%);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px 0 rgba(0, 198, 251, 0.10);
+}
+
+.manage-profile-name {
+    min-width: 160px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.manage-update-link {
+    color: #00c6fb;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: auto;
+    transition: text-decoration 0.18s;
+}
+
+.manage-update-link:hover {
+    text-decoration: underline;
+}
+
+.manage-email {
+    margin-left: 60px;
+    color: #fff;
+    font-size: 1.08rem;
+}
+
+@media (max-width: 900px) {
+    .manage-card {
+        min-width: unset;
+        padding: 24px 8px 24px 8px;
+    }
+
+    .manage-main {
+        padding: 24px 0 24px 0;
+    }
+
+    .manage-sidebar {
+        min-width: 120px;
+        width: 120px;
+        padding: 16px 0 0 0;
+    }
+
+    .manage-sidebar-title,
+    .manage-sidebar-subtitle {
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .manage-container {
+        flex-direction: column;
+    }
+
+    .manage-sidebar {
+        width: 100vw;
+        border-radius: 0;
+        min-height: unset;
+        padding: 12px 0 0 0;
+    }
+
+    .manage-main {
+        padding: 0;
+    }
+
+    .manage-card {
+        min-width: unset;
+        padding: 12px 2px 12px 2px;
+        border-radius: 0;
+    }
+}

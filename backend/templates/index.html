@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Recognition Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <i class="fas fa-fingerprint fa-4x" style="color: var(--accent-color); text-shadow: var(--accent-glow);"></i>
+        </div>
+        <h1>Facial Recognition System</h1>
+        
+        
+       
+        
+        <div class="button-container">
+            <a href="{{ url_for('register_page') }}" class="btn">
+                <i class="fas fa-user-plus"></i> Register
+            </a>
+            <a href="{{ url_for('login_page') }}" class="btn">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+        </div>
+    </div>
+    
+    <!-- <footer class="footer">
+        <p>Powered by Advanced Facial Recognition Technology</p>
+    </footer> -->
+    
+    <style>
+        .logo-container {
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .feature i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            text-shadow: var(--accent-glow);
+        }
+        
+        .footer {
+            margin-top: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+</body>
+</html>
